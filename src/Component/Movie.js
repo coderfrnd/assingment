@@ -1,0 +1,19 @@
+import React from "react";
+const MovieSummary = (props) => {
+
+    const { name, summary, img } = props
+    console.log("summary:-", summary);
+
+    return (
+        <div className="text-center">
+            <h3 >
+                {name}
+            </h3>
+            <img alt='movie' width={'40%'} src={img} />
+            <div dangerouslySetInnerHTML={{ __html: summary }} className="mt-4">
+            </div>
+        </div>
+    )
+}
+
+export default MovieSummary;
